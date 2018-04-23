@@ -121,6 +121,22 @@ export type Pitch = {
   left_handed_batter: number
 };
 
+export type PitchClass = {
+  type: string; value: number; pitch_code: number;
+};
+
+export type PitchPredictionMessage = {
+  uuid: string,
+  pitch: Pitch,
+  actual: string,
+  classes: PitchClass[]
+};
+
+export type PredictionUpdateMessage = {
+  uuid: string,
+  classes: PitchClass[]
+};
+
 export type SZData = {
   px: number,
   pz: number,
