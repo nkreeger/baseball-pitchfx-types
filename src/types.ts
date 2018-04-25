@@ -122,19 +122,28 @@ export type Pitch = {
 };
 
 export type PitchClass = {
-  type: string; value: number; pitch_code: number;
+  type: string,
+  value: number,
+  pitch_code: number
+};
+
+export type StrikeZoneClass = {
+  value: number,
+  strike: number
 };
 
 export type PitchPredictionMessage = {
   uuid: string,
   pitch: Pitch,
   actual: string,
-  classes: PitchClass[]
+  pitch_classes: PitchClass[],
+  strike_zone_classes: StrikeZoneClass[]
 };
 
-export type PredictionUpdateMessage = {
+export type PitchPredictionUpdateMessage = {
   uuid: string,
-  classes: PitchClass[]
+  pitch_classes: PitchClass[],
+  strike_zone_classes: StrikeZoneClass[]
 };
 
 export type SZData = {
