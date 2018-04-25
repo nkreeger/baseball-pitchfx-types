@@ -13,12 +13,12 @@ export function pitchTypeToInt(type: string): number {
     return 5;
   } else if (type === 'CB') {  // Curveball
     return 6;
-    } else if (type === 'KC') {  // Knuckle-curve
-      return 7;
-    } else if (type === 'KN') {  // Knuckleball
-      return 8;
-    } else if (type === 'EP') {  // Eephus
-      return 9;
+  } else if (type === 'KC') {  // Knuckle-curve
+    return 7;
+  } else if (type === 'KN') {  // Knuckleball
+    return 8;
+  } else if (type === 'EP') {  // Eephus
+    return 9;
   } else {
     return -1;
   }
@@ -40,6 +40,12 @@ export function pitchFromType(type: number): string {
       return 'Changeup';
     case 6:
       return 'Curveball';
+    case 7:
+      return 'Knuckle-curve';
+    case 8:
+      return 'Knuckleball';
+    case 9:
+      return 'Eephus';
     default:
       return 'Unknown';
   }
